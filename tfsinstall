@@ -29,3 +29,26 @@ else
 echo "Installed Services run $(tput bold)$(tput setaf 2)Sucessfully$(tput sgr0)"
 fi
 echo -e "\n"
+#Moving back into home directory
+cd 
+#Setting up ZnoteAAC
+git clone 
+https://github.com/Znote/ZnoteAAC.git
+#Moving ZnoteAAC to www folder of apache
+cd
+mv ZnoteAAC /var/www/html/
+#Dunno how to put files from znoteaac into www
+#You do dat xD
+#Next Step create dtb and import mysql sql schema
+mysql -u root -p CREATE DATABASE otserv;
+mysql -u root -p -h localhost otserv < schema.sql
+#Running mysql script from znote
+cd 
+cd /ZnoteAAC/
+#Dont know where znote sql script is
+#the one you are asked to enter when going to inde
+#index.php for setup
+mysql -u root -p otserv < znote.sql
+#Now how to edit auto znote config
+#Restart mysql
+service apache2 restart && service mysql restart
