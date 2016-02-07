@@ -1,12 +1,15 @@
 #!/bin/bash
 apt-get update
+apt-get install luajit
 apt-get install sudo
 sudo apt-get install git cmake build-essential liblua5.2-dev libgmp3-dev libmysqlclient-dev libboost-system-dev
+apt-get upgrade
 git clone https://github.com/otland/forgottenserver.git
 cd forgottenserver
 mkdir build && cd build
 cmake..
 make
+mv tfs ..
 echo "###################################################################################"
 echo "Please be Patient: Installation will start now.......and it will take some time :)"
 echo "###################################################################################"
@@ -15,6 +18,7 @@ sudo apt-get update
 #Apache, Php, MySQL and required packages installation
 sudo apt-get -y install apache2 php5 libapache2-mod-php5 php5-mcrypt php5-curl php5-mysql php5-mysqlnd php5-gd php5-cli php5-dev php5-json mysql-client
 php5enmod mcrypt
+sudo apt-get upgrade
 #The following commands set the MySQL root password to MYPASSWORD123 when you install the mysql-server package.
 sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password password MYPASSWORD123'
 sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password MYPASSWORD123'
@@ -36,18 +40,13 @@ git clone
 https://github.com/Znote/ZnoteAAC.git
 #Moving ZnoteAAC to www folder of apache
 cd
-mv ZnoteAAC /var/www/html/
-#Dunno how to put files from znoteaac into www
-#You do dat xD
+mv  -v ~/ZnoteAAC/* ~/var/www/html/
 #Next Step create dtb and import mysql sql schema
 mysql -u root -p CREATE DATABASE otserv;
 mysql -u root -p -h localhost otserv < schema.sql
 #Running mysql script from znote
 cd 
 cd /ZnoteAAC/
-#Dont know where znote sql script is
-#the one you are asked to enter when going to inde
-#index.php for setup
 mysql -u root -p otserv < znote.sql
 #Now how to edit auto znote config
 #Restart mysql
