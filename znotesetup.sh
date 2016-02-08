@@ -1,3 +1,4 @@
+#!/bin/bash
 cd /var/www/html
 #Setting up ZnoteAAC
 git clone 
