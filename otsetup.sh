@@ -12,16 +12,18 @@ read -r -p "Do you want to compile latest TFS? [Y/n]" response
  response=${response,,} # tolower
  if [[ $response =~ ^(yes|y| ) ]]; then
     wget https://raw.githubusercontent.com/NicolasLoew/vps/master/tfsauto.sh
-    chmod +x tfsauto.sh
-    sh tfsauto.sh
+    chmod +x ./tfsauto.sh
+    ./tfsauto.sh
+    printf "You have successfully compiled TFS! You can start it by going to cd forgottenserver and execute ./tfs. Dont forget to configure config.lua though. You can create database in webpanel-->enduser."
  fi
- printf "You have successfully compiled TFS! You can start it by going to cd forgottenserver and execute ./tfs. Dont forget to configure config.lua though. You can create database in webpanel-->enduser."
  read -r -p "Do you want to install ZnoteAAC? [Y/n]" response
  response=${response,,} # tolower
  if [[ $response =~ ^(yes|y| ) ]]; then
   wget https://raw.githubusercontent.com/NicolasLoew/vps/master/znotesetup.sh
-  sh znotesetup.sh  
+  chmod +x znotesetup.sh
+  ./znotesetup.sh
+  printf "You havee successfully setup ZnoteAAC. Navigate to http://yourip and follow the instructions."
  fi
-printf "You havee successfully setup ZnoteAAC. Navigate to http://yourip and follow the instructions."
+
 
 
