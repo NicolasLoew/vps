@@ -12,6 +12,7 @@ read -r -p "Do you want to compile latest TFS? [Y/n]" response
  response=${response,,} # tolower
  if [[ $response =~ ^(yes|y| ) ]]; then
     wget https://raw.githubusercontent.com/NicolasLoew/vps/master/tfsauto.sh
+    chmod +x tfsauto.sh
     sh tfsauto.sh
  fi
  printf "You have successfully compiled TFS! You can start it by going to cd forgottenserver and execute ./tfs. Dont forget to configure config.lua though. You can create database in webpanel-->enduser."
