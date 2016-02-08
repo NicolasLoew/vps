@@ -10,7 +10,7 @@ read -r -p "Do you want to compile latest TFS? [Y/n]" response
     wget https://raw.githubusercontent.com/NicolasLoew/vps/master/tfsauto.sh
     sh tfsauto.sh
  fi
- read -r -p "Are you sure? [Y/n]" response
+ read -r -p "Do you want to install ZnoteAAC? [Y/n]" response
  response=${response,,} # tolower
  if [[ $response =~ ^(yes|y| ) ]]; then
   wget https://raw.githubusercontent.com/NicolasLoew/vps/master/znotesetup.sh
