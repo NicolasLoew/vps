@@ -1,11 +1,12 @@
 #!/bin/bash
 printf "Hello. This is an OTS."
-read -r -p "Do you want to install the webpanel? [Y/n]" response
- response=${response,,} # tolower
- if [[ $response =~ ^(yes|y| ) ]]; then
+read -p "Are you sure? " -n 1 -r
+echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
     wget https://raw.githubusercontent.com/NicolasLoew/vps/master/panelsetup.sh
     sh panelsetup.sh
- fi
+fi
  printf "If you installed webpanel please navigate to http://yourip:2004/ and follow install instructions."
  printf "Once you have installed the webpanel login and go to Enduser-->Configuration-->Apache and delete everything in the config and replace it with https://raw.githubusercontent.com/NicolasLoew/vps/master/apacheconfig. This will be needed for Znote later."
 read -r -p "Do you want to compile latest TFS? [Y/n]" response
