@@ -21,6 +21,6 @@ read -r -p "Do you want to compile latest TFS? [Y/n]" response
   wget https://raw.githubusercontent.com/NicolasLoew/vps/master/znotesetup.sh
   sh znotesetup.sh  
  fi
-printf "You have successfully setup ZnoteAAC. Navigate to http://yourip and follow the instructions."
+printf "You havee successfully setup ZnoteAAC. Navigate to http://yourip and follow the instructions."
 
 
