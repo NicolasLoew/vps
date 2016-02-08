@@ -7,7 +7,7 @@ apt-get upgrade
 git clone https://github.com/otland/forgottenserver.git
 cd forgottenserver
 mkdir build && cd build
-cmake..
+cmake ..
 make
 mv tfs ..
 echo "###################################################################################"
