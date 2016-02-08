@@ -1,3 +1,4 @@
+#!/bin/bash
 printf "Hello. This is an OTS setup script provided by Damon at Otland. Please standby as user input may be required."
 read -r -p "Do you want to install the webpanel? [Y/n]" response
  response=${response,,} # tolower
