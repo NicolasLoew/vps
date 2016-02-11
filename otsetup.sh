@@ -1,5 +1,7 @@
 #!/bin/bash
 printf "Hello. This is an OTS setup script provided by Damon at Otland. Please standby as user input may be required."
+printf "Installing sudo and update packages"
+apt-get install sudo -y
 read -r -p "Do you want to install the LAMPP+phpMyAdmin? [Y/n]" response
  response=${response,,} # tolower
  if [[ $response =~ ^(yes|y| ) ]]; then
