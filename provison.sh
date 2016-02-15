@@ -1,8 +1,8 @@
 #!/bin/bash
 cd /etc/init.d
-wget 
+wget https://raw.githubusercontent.com/NicolasLoew/vps/master/hostnameubuntu.sh
 chmod +x hostnameubuntu.sh
 cd /etc/profile.d
-wget
+wget https://raw.githubusercontent.com/NicolasLoew/vps/master/hostnameubuntu.sh
 chmod +x hostnameubuntu.sh
 cd
