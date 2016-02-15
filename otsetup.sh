@@ -9,7 +9,7 @@ read -r -p "Do you want to install the LAMPP+phpMyAdmin? [Y/n]" response
     chmod +x lamp.sh
    sudo ./lamp.sh
     printf "You have successfully installed LAMPP! Now phpMyAdmin.."
-    wget https://raw.githubusercontent.com/NicolasLoew/vps/master/lamp.sh
+    wget https://raw.githubusercontent.com/NicolasLoew/vps/master/pma.sh
     chmod +x pma.sh
     sudo ./pma.sh
     printf "You have installed phpMyAdmin!"
