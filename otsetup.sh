@@ -5,11 +5,15 @@ apt-get install sudo -y
 read -r -p "Do you want to install the LAMPP+phpMyAdmin? [Y/n]" response
  response=${response,,} # tolower
  if [[ $response =~ ^(yes|y| ) ]]; then
-    wget https://raw.githubusercontent.com/NicolasLoew/vps/master/lampp.sh
-    chmod +x lampp.sh
-    sh lampp.sh
-    printf "You have successfully installed LAMPP+phpMyAdmin!"
- fi
+    wget https://raw.githubusercontent.com/NicolasLoew/vps/master/lamp.sh
+    chmod +x lamp.sh
+    ./lamp.sh
+    printf "You have successfully installed LAMPP! Now phpMyAdmin.."
+    wget https://raw.githubusercontent.com/NicolasLoew/vps/master/lamp.sh
+    chmod +x pma.sh
+    ./pma.sh
+    printf "You have installed phpMyAdmin!"
+    fi
  read -r -p "Do you want to compile latest TFS? [Y/n]" response
  response=${response,,} # tolower
  if [[ $response =~ ^(yes|y| ) ]]; then
