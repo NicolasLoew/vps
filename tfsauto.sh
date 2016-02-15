@@ -3,7 +3,7 @@ cd
 apt-get update
 apt-get install luajit
 apt-get install sudo
-sudo apt-get install git cmake build-essential liblua5.2-dev libgmp3-dev libmysqlclient-dev libboost-system-dev
+sudo apt-get install git cmake build-essential liblua5.2-dev libgmp3-dev libmysqlclient-dev libboost-system-dev libpugixml-dev
 apt-get update
 apt-get upgrade
 git clone https://github.com/otland/forgottenserver.git
