@@ -1,7 +1,8 @@
 #!/bin/bash
 sudo apt-get install php5
 sudo apt-get install php5-curl
-cd /var/www/html
+cd /var
+cd www
 #Setting up ZnoteAAC
 git clone https://github.com/Znote/ZnoteAAC.git
 cd ZnoteAAC
