@@ -1,6 +1,6 @@
 #!/bin/bash
-sudo apt-get install php5
-sudo apt-get install php5-curl
+sudo apt-get -y install php5
+sudo apt-get -y install php5-curl
 cd /var
 cd www
 cd html
