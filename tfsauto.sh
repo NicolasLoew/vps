@@ -1,4 +1,5 @@
 #!/bin/bash
+cd 
 apt-get update
 apt-get install luajit
 apt-get install sudo
