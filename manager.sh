@@ -19,3 +19,6 @@ read -r -p "Are you done with nano? [Y/n]" response
  if [[ $response =~ ^(yes|y| ) ]]; then
    source ~/.bashrc
  fi
+cd
+clear
+printf "Done"
