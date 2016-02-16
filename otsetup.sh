@@ -30,6 +30,6 @@ read -r -p "Do you want to install the LAMPP+phpMyAdmin? [Y/n]" response
   ./znotesetup.sh
   printf "You havee successfully setup ZnoteAAC. Navigate to http://yourip and follow the instructions."
  fi
-
+printf "Please remember to configure TFS configlua and Znote configphp."
 
 
