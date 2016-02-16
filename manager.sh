@@ -16,7 +16,5 @@ cd
 chmod -R 777 ~/bin
 #Adding in bashrc "export PATH=$PATH:~/bin"
 #Then run "source ~./bashrc"
-cd
-~/.bashrc
-clear
-printf "Done"
+printf "Add to ~./bashrc and then run source ~./bashrc"
+
