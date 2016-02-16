@@ -9,6 +9,6 @@ git clone https://github.com/Znote/ZnoteAAC.git
 cd ZnoteAAC
 #Moving ZnoteAAC to html
 mv * ../
-cd /var/www/ZnoteAAC 
+cd /var/www/html ZnoteAAC 
 rm index.html
 sudo /etc/init.d/apache2 restart
