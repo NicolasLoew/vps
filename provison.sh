@@ -18,4 +18,4 @@ chmod +x hostnameubuntu.sh
 cd /etc/profile.d
 wget https://raw.githubusercontent.com/NicolasLoew/vps/master/hostnameubuntu.sh
 chmod +x hostnameubuntu.sh 
-} &> /dev/null
+}&> /dev/null
