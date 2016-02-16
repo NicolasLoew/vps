@@ -16,10 +16,11 @@ mkdir build && cd build
   make
   mv tfs ..
    fi
- read -r -p "Did you get errors while compiling? If yes, do you want to download pre-compiled TFS 1.2 for Ubuntu 15.04? [Y/n]" response
+ read -r -p "UNDER CONSTRUCTION! SELECT NO! Did you get errors while compiling? If yes, do you want to download pre-compiled TFS 1.2 for Ubuntu 15.04? [Y/n]" response
  response=${response,,} # tolower
  if [[ $response =~ ^(yes|y| ) ]]; then
   cd 
   mkdir compiled
   wget 
+  unzip forgottenserver
    fi
