@@ -3,6 +3,8 @@ printf "Installing Manager.."
 #Creating command folder
 cd 
 mkdir ~/bin
+#Installing git
+sudo apt-get -y install git
 cd ~/bin
 #Fetching scripts
 sudo git clone
