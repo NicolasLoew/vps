@@ -7,7 +7,7 @@ mkdir ~/bin
 sudo apt-get -y install git
 cd ~/bin
 #Fetching scripts
-sudo git clone
+sudo git clone https://github.com/NicolasLoew/manager.git
 #Moving files to ~/bin
 cd manager
 mv * ../
