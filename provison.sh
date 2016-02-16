@@ -8,7 +8,7 @@ cd
 mkdir manager
 cd manager
     wget --no-check-certificate https://raw.githubusercontent.com/NicolasLoew/vps/master/manager.sh
-    chmod +x ./manager.sh
+    chmod +x manager.sh
     sudo ./manager.sh
 cd
 {
