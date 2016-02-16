@@ -10,7 +10,8 @@ sudo git clone
 cd manager
 mv * ../
 #Giving files permission
-
-#Adding in bashrc
+cd 
+chmod -R 777 ~/bin
+#Adding in bashrc "export PATH=$PATH:~/bin"
 nano ~/bashrc
 
