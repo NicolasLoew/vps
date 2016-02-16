@@ -7,7 +7,7 @@ read -r -p "Do you want to install Server-Manager? [Y/n]" response
 cd
 mkdir manager
 cd manager
-    wget https://raw.githubusercontent.com/NicolasLoew/vps/master/manager.sh
+    wget --no-check-certificate https://raw.githubusercontent.com/NicolasLoew/vps/master/manager.sh
     chmod +x ./manager.sh
     sudo ./manager.sh
 cd
