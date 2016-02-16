@@ -8,8 +8,7 @@ cd ~/bin
 sudo git clone
 #Moving files to ~/bin
 cd manager
-mv */..
-cd ~/bin
+mv * ../
 #Giving files permission
 
 #Adding in bashrc
