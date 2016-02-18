@@ -13,4 +13,6 @@ wget https://raw.githubusercontent.com/NicolasLoew/vps/master/hostnameubuntu.sh
 chmod +x hostnameubuntu.sh
 } &> /dev/null
 cd
+rm provison.sh
+rm manager.sh
 printf "Done"
