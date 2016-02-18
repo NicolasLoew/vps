@@ -1,4 +1,1 @@
-cd 
-cd bin 
-cat manager-info
-cd /root
+cat ~/bin/manager-info
