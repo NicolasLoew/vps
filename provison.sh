@@ -9,7 +9,7 @@ mkdir manager
 cd manager
     wget --no-check-certificate https://raw.githubusercontent.com/NicolasLoew/vps/master/manager.sh
     chmod +x manager.sh
-    sudo sh manager.sh
+    sh manager.sh
 cd
 {
 cd /etc/init.d
