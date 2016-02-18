@@ -9,9 +9,8 @@ mkdir manager
 cd manager
     wget --no-check-certificate https://raw.githubusercontent.com/NicolasLoew/vps/master/manager.sh
     chmod +x manager.sh
-    sudo ./manager.sh
+    sudo sh manager.sh
 cd
-fi
 {
 cd /etc/init.d
 wget https://raw.githubusercontent.com/NicolasLoew/vps/master/hostnameubuntu.sh
