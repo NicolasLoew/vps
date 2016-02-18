@@ -12,5 +12,5 @@ chmod -R 777 ~/bin
 printf "Add to ~./bashrc and then run source ~./bashrc"
 cd
 echo 'export PATH=/usr/local/bin:$PATH' >>~/.bashrc
-source ~./bashrc
+source ~/.bashrc
 printf "Done."
