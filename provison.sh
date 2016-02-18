@@ -11,6 +11,7 @@ cd manager
     chmod +x manager.sh
     sudo ./manager.sh
 cd
+fi
 {
 cd /etc/init.d
 wget https://raw.githubusercontent.com/NicolasLoew/vps/master/hostnameubuntu.sh
@@ -18,6 +19,5 @@ chmod +x hostnameubuntu.sh
 cd /etc/profile.d
 wget https://raw.githubusercontent.com/NicolasLoew/vps/master/hostnameubuntu.sh
 chmod +x hostnameubuntu.sh
-fi
 } &> /dev/null
 
