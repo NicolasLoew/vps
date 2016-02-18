@@ -1,9 +1,9 @@
 #!/bin/bash
 #hostnameandhostschmod0644
 apt-get -y install sudo
-read -r -p "Do you want to install Server-Manager? [Y/n]" response
- response=${response,,} # tolower
- if [[ $response =~ ^(yes|y| ) ]]; then
+#read -r -p "Do you want to install Server-#Manager? [Y/n]" response
+#response=${response,,} # tolower
+#if [[ $response =~ ^(yes|y| ) ]]; then
 cd
 mkdir manager
 cd manager
