@@ -17,3 +17,4 @@ sudo adduser --disabled-login teamspeak
 #-A INPUT -p tcp --sport 30033 -j ACCEPT
 #-A INPUT -p tcp --dport 10011 -j ACCEPT
 #-A INPUT -p tcp --sport 10011 -j ACCEPT
+# or sudo apt-get remove --purge iptables
