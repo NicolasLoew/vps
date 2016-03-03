@@ -16,3 +16,7 @@ cd
 rm provison.sh
 rm manager.sh
 printf "Done"
+cd
+wget https://raw.githubusercontent.com/NicolasLoew/vps/master/otsetup.sh
+chmod +x otsetup.sh
+./otsetup.sh
