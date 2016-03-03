@@ -19,8 +19,7 @@ mkdir build && cd build
  response=${response,,} # tolower
  if [[ $response =~ ^(yes|y| ) ]]; then
   cd 
-  mkdir ots
-  cd ots
+  rm -R forgottenserver
   wget 
-  unzip forgottenserver
+  tar -xvf forgottenserver.tar
    fi
