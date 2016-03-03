@@ -1,4 +1,12 @@
 #!/bin/sh
+#Instructions to use this script
+#
+#chmod +x SCRIPTNAME.sh
+#
+#sudo ./SCRIPTNAME.sh
+echo "###################################################################################"
+echo "Please be Patient: Installation will start now.......and it will take some time :)"
+echo "###################################################################################"
 #Update the repositories
 sudo apt-get update
 #Apache, Php, MySQL and required packages installation
@@ -47,30 +55,6 @@ mv * ../
 cd /var/www/html ZnoteAAC 
 rm index.html
 sudo /etc/init.d/apache2 restart
-#Adding tfs commands
-#!bin/bash
-printf "Installing Manager.."
-#Installing git
-sudo apt-get -y install git
-#Fetching scripts
-sudo git clone https://github.com/NicolasLoew/bin.git
-#Giving files permission
-cd 
-chmod -R 777 ~/bin
-#Adding in bashrc "export PATH=$PATH:~/bin"
-#Then run "source ~./bashrc"
-printf "Add to ~./bashrc and then run source ~./bashrc"
-cd
-echo 'export PATH=$PATH:~/bin' >>~/.bashrc
-source ~/.bashrc
-cd /etc/init.d
-wget https://raw.githubusercontent.com/NicolasLoew/vps/master/managerdisplay.sh
-chmod +x managerdisplay.sh
-cd /etc/profile.d
-wget https://raw.githubusercontent.com/NicolasLoew/vps/master/managerdisplay.sh
-chmod +x managerdisplay.sh
-cd /root
-printf "Done."
 #Grabbing pre-compiled TFS 1.20
 cd
 wget http://109.235.71.13/forgottenserver.rar
