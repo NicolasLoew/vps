@@ -11,7 +11,6 @@ mkdir build && cd build
  read -r -p "If you dont want to use latest TFS sources but instead use your own sources to compile please exchange them with those in the build folder before you continue. Continue? [Y/n]" response
  response=${response,,} # tolower
  if [[ $response =~ ^(yes|y| ) ]]; then
-  cd build
   cmake ..
   make
   mv tfs ..
@@ -20,7 +19,8 @@ mkdir build && cd build
  response=${response,,} # tolower
  if [[ $response =~ ^(yes|y| ) ]]; then
   cd 
-  mkdir compiled
+  mkdir ots
+  cd ots
   wget 
   unzip forgottenserver
    fi
