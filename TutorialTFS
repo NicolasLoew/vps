@@ -1,0 +1,69 @@
+apt-get -y update && apt-get -y upgrade
+apt-get -y install nano
+adduser otland (pw testing)
+visudo
+otland like root
+ctrl+o ENTER ctrl+x
+
+Y
+ENTER
+#Install LAMP Linux Apache MySQL PHP
+sudo apt-get -y install apache2
+sudo systemctl enable apache2
+sudo systemctl start apache2
+sudo systemctl status apache2 
+sudo apt-get -y install mysql-server mysql-client
+sudo systemctl status mysql
+sudo apt-get -y update
+sudo apt-get install php7.0-mysql php7.0-curl php7.0-json php7.0-cgi  php7.0 libapache2-mod-php7.0
+php -v 
+sudo apt-get -y install phpmyadmin 
+administrative pw: testing
+sudo nano /etc/apache2/apache2.conf
+add at the end: Include /etc/phpmyadmin/apache.conf
+sudo apt-get -y install php-mbstring php7.0-mbstring php-gettext
+sudo systemctl restart apache2
+sudo nano /etc/apache2/conf-enabled/phpmyadmin.conf
+sudo systemctl restart apache2
+
+
+#compiling tfs
+sudo apt-get -y install luajit
+sudo apt-get -y install git cmake build-essential liblua5.2-dev libmp3-dev libmysqlclient-dev 
+libboost-system-dev libpugixml-dev
+sudo apt-get -y update
+sudo git clone https://github.com/otland/forgottenserver.git
+cd forgottenserver
+sudo mkdir build && cd build
+sudo cmake ..
+sudo make
+sudo mv tfs ..
+cd ..
+create otsuser in pma and import mysql scheme from source
+sudo nano config.lua edits
+sudo sh tfs.sh
+
+
+#installing ZnoteAAC
+cd /var/www/html
+sudo git clone https://github.com/Znote/ZnoteAAC.git
+cd ZnoteAAC
+sudo mv * ../
+cd /var/www/html
+sudo rm index.html
+sudo /etc/init.d/apache2 restart
+go to mysql site
+sudo nano config.php
+cd /etc/apache2/mods-enabled 
+sudo nano dir.conf
+index.php front
+sudo service apache2 restart
+
+su root
+sudo nano /etc/ssh/sshd_config
+change ports
+PermitRootLogin no
+save
+service sshd restart
+service sshd restart
+
