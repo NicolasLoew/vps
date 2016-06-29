@@ -1,0 +1,13 @@
+sudo apt-get install network-manager-openvpn
+
+sudo apt-get install network-manager-openvpn-gnome
+
+https://nordvpn.com/api/files/zip
+
+https://nordvpn.com/api/static/ca_and_tls_auth_certificates.zip
+
+#Edit connections: Add vpn connection from file (nordvpn ovpn files)
+#Choose vpn file
+#Authenticate with password (nord user&pass) + cert
+#Advanced: TLS key
+#Key direction 1
