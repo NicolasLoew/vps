@@ -14,3 +14,9 @@ chmod +x netdata-installer.sh
 #systemctl enable netdata
 #service netdata start
 #echo "Done. Go to yourip:19999"
+#manualinstallation
+# Debian / Ubuntu
+#apt-get install zlib1g-dev uuid-dev libmnl-dev gcc make git autoconf autoconf-archive autogen automake pkg-config
+
+# Centos / Fedora / Redhat
+#yum install zlib-devel libuuid-devel libmnl-devel gcc make git autoconf autoconf-archive autogen automake pkgconfig
