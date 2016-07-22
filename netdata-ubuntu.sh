@@ -7,10 +7,10 @@ git clone https://github.com/firehol/netdata.git --depth=1
 cd netdata
 chmod +x netdata-installer.sh
 ./netdata-installer.sh
-echo "making netdata start at boot"
-killall netdata
-cp system/netdata.service /etc/systemd/system/
-systemctl daemon-reload
-systemctl enable netdata
-service netdata start
-echo "Done. Go to yourip:19999"
+#echo "making netdata start at boot"
+#killall netdata
+#cp system/netdata.service /etc/systemd/system/
+#systemctl daemon-reload
+#systemctl enable netdata
+#service netdata start
+#echo "Done. Go to yourip:19999"
