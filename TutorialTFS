@@ -29,8 +29,7 @@ sudo systemctl restart apache2
 
 #compiling tfs
 sudo apt-get -y install luajit
-sudo apt-get -y install git cmake build-essential liblua5.2-dev libgmp3-dev libmysqlclient-dev 
-ldo apt-get install git cmake build-essential liblua5.2-dev libgmp3-dev libmysqlclient-dev libboost-system-dev libboost-iostreams-dev libpugixml-dev
+sudo apt-get install git cmake build-essential liblua5.2-dev libgmp3-dev libmysqlclient-dev libboost-system-dev libboost-iostreams-dev libpugixml-dev
 sudo apt-get -y update
 sudo git clone https://github.com/otland/forgottenserver.git
 cd forgottenserver
