@@ -7,3 +7,8 @@ Base64 encode on linux with:
 echo -n "my@email.com:mypassword" | base64
 
 or online :)
+
+Keep filename:
+
+wget --content-disposition http://myurl.net/?a=hgafndaw2a   
+
