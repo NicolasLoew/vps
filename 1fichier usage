@@ -1,3 +1,9 @@
 Old link: https://1fichier.com/?04gfddnltj
 
 Direct link: http://csg.nd.vu/?a=04gfddnltj
+
+Base64 encode on linux with:
+
+echo -n "my@email.com:mypassword" | base64
+
+or online :)
