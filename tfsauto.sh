@@ -8,8 +8,12 @@ apt-get -y install sudo
 echo "Installing LAMP Stack.."
 sudo apt-get -y install apache2
 sudo apt-get -y install mysql-server
+sudo mysql -e "CREATE USER 'otsuser'@'localhost' IDENTIFIED BY 'password';"
+sudo mysql -e "GRANT ALL PRIVILEGES ON * . * TO 'otsuser'@'localhost' WITH GRANT OPTION;"
+sudo mysql -e "FLUSH PRIVILEGES;"
 sudo apt-get -y install php libapache2-mod-php php-mysql
-echo "Installing required softwarefor TFS.."
+sudo service apache2 start
+echo "Installing required software.."
 sudo apt-get -y install luajit
 sudo apt-get -y install git cmake build-essential liblua5.2-dev libgmp3-dev libmysqlclient-dev libboost-system-dev libboost-iostreams-dev libboost-filesystem-dev libpugixml-dev libcrypto++-dev
 sudo apt-get -y update
@@ -22,6 +26,9 @@ sudo make
 sudo mv tfs ..
 cd
 cd ..
-echo "Done. Make sure to adjust config before starting the server."
+echo "Done! Make sure to adjust config file before starting the server."
+echo "The following dummy user has been created at MySQL localhost:"
+echo "username: otsuser pw: password"
+echo "Use to test TFS only!"
 echo "To start the server use 'cd' to navigate to your home directory."
 echo "You can launch it from there using './tfs'"
