@@ -29,6 +29,6 @@ cd ..
 echo "Done! Make sure to adjust config file before starting the server."
 echo "The following dummy user has been created at MySQL localhost:"
 echo "username: otsuser pw: password"
-echo "Use to test TFS only!"
+echo "Use to test TFS only"
 echo "To start the server use cd to navigate to your home directory."
 echo "You can launch it from there using ./tfs"
