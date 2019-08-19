@@ -9,8 +9,8 @@ echo "Installing LAMP Stack.."
 sudo apt-get -y install apache2
 sudo apt-get -y install mysql-server
 sudo mysql -e "CREATE USER 'otsuser'@'localhost' IDENTIFIED BY 'password';"
-sudo mysql -e "GRANT ALL PRIVILEGES ON * . * TO 'otsuser'@'localhost' WITH GRANT OPTION;"
-sudo mysql -e "FLUSH PRIVILEGES;"
+sudo mysql -e "CREATE DATABASE otsdb;"
+sudo mysql -e "GRANT ALL PRIVILEGES ON otsdb.* TO 'otsuser'@'localhost';"
 sudo apt-get -y install php libapache2-mod-php php-mysql
 sudo service apache2 start
 echo "Installing required software.."
@@ -25,7 +25,8 @@ sudo cmake ..
 sudo make
 sudo mv tfs ..
 cd ..
-echo "Done! Make sure to adjust config file before starting the server."
+sudo mysql -u otsuser -p otsdb < schema.sql
+echo "Done! Make sure to adjust configlua before starting the server."
 echo "The following dummy user has been created at MySQL localhost:"
-echo "username: otsuser pw: password   Warning: TESTING PURPOSES ONLY"
+echo "MySQL username: otsuser pw: password db: otsdb  Warning: TESTING PURPOSES ONLY"
 echo "You can launch the server from /home/forgottenserver using ./tfs"
