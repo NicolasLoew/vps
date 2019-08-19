@@ -29,4 +29,4 @@ sudo mysql -u otsuser -p otsdb < schema.sql
 echo "Done! Make sure to adjust configlua before starting the server."
 echo "The following dummy user has been created at MySQL localhost:"
 echo "MySQL username: otsuser pw: password db: otsdb  Warning: TESTING PURPOSES ONLY"
-echo "You can launch the server from /home/forgottenserver using ./tfs"
+echo "You can launch the server from /home/username/forgottenserver using ./tfs"
