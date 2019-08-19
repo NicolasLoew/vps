@@ -24,7 +24,6 @@ sudo mkdir build && cd build
 sudo cmake ..
 sudo make
 sudo mv tfs ..
-cd
 cd ..
 echo "Done! Make sure to adjust config file before starting the server."
 echo "The following dummy user has been created at MySQL localhost:"
