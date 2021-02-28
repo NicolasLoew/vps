@@ -15,6 +15,7 @@ sudo apt-get -y install php libapache2-mod-php php-mysql
 sudo service apache2 start
 echo "Installing required software"
 sudo apt-get -y install luajit
+sudo apt-get -y install libboost-date-time-dev
 sudo apt-get -y install git cmake build-essential libluajit-5.1-dev libmysqlclient-dev libboost-system-dev libboost-iostreams-dev libboost-filesystem-dev libpugixml-dev libcrypto++-dev
 sudo apt-get -y update
 echo "Downloading and compiling TFS..Please wait"
