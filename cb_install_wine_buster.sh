@@ -1,6 +1,6 @@
 #Script written by Ympker;  github.com/nicolasloew
 #This script will help you to fully install Wine on your Chromebook or Linux. Just follow the instructions in the command line where applicable.
-#System running on Debian 10 Buster. It follows the recommendations on
+#System running on Debian 10 Buster. Tested on Acer Chromebook 315-3HT. It follows the recommendations on
 #https://wiki.winehq.org/Debian and also will install the libfaudio0  packages which are required to run Wine without problems.
 #You must be root or sudo user to run this script. Run at your own risk. 
 sudo apt-get -y update #update system
