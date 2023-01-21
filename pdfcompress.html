@@ -1,0 +1,32 @@
+<head>
+    <title>Compress PDF</title>
+</head>
+<h1>Compress PDF</h1>
+<form method="post" enctype="multipart/form-data">
+    <label for="file">Filename:</label>
+    <input type="file" name="file" id="file"><br>
+    <input type="submit" name="submit" value="Submit">
+</form>
+<?bash
+read && read disposition && read ctype && read
+size=$((CONTENT_LENGTH-a))
+ 
+eval `echo "${disposition}"|sed 's/\r$//'|cut -d';' -f3`
+ 
+dd ibs=1 obs=512 count=$size of="/tmp/pdf/$filename"
+ 
+echo "$filename<br>"
+ 
+output=$(sed -E 's/(.*)\.pdf/\1_compressed.pdf/' <<< $filename)
+output=$(sed -E 's/ /_/g' <<< $output)
+ 
+if [ -f "/tmp/pdf/$filename" ]
+then
+    gs -q -r72 -dBATCH -dNOPAUSE -sDEVICE=pdfwrite -dCompatibilityLevel=1.5 -dColorConversionStrategy=/LeaveColorUnchanged -dPDFSETTINGS=/screen -dEmbedAllFonts=true -dSubsetFonts=true -dAutoRotatePages=/None -dColorImageDownsampleType=/Bicubic -dGrayImageDownsampleType=/Bicubic -dMonoImageDownsampleType=/Subsample -dGrayImageResolution=72 -dColorImageResolution=72 -dMonoImageResolution=72 -sOutputFile="/tmp/pdf/$output" "/tmp/pdf/$filename";
+    echo "<a href="pdf/$output" download>Download compressed pdf.</a>"
+fi
+ 
+?>
+</html>
+
+<!--Source: https://pastebin.com/TarVvSX5 ; use at own risk-->
