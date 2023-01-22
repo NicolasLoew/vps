@@ -1,11 +1,15 @@
-apt-get -y update
-apt-get -y install nano
-apt-get -y install wget
-apt-get -y install sudo
-echo 'none /run tmpfs defaults,size=64M 0 0' >> /etc/fstab
-mount -o remount /run
-df -h /run
-cd
+ read -r -p "Do you want to update system and install nano, wget and sudo and adjust fstab? [Y/n]" response
+ response=${response,,} # tolower
+ if [[ $response =~ ^(yes|y| ) ]]; then
+     apt-get -y update
+     apt-get -y install nano
+     apt-get -y install wget
+     apt-get -y install sudo
+     echo 'none /run tmpfs defaults,size=64M 0 0' >> /etc/fstab
+     mount -o remount /run
+     df -h /run
+     cd
+     fi
      read -r -p "Do you want to adduser ympker? [Y/n]" response
  response=${response,,} # tolower
  if [[ $response =~ ^(yes|y| ) ]]; then
