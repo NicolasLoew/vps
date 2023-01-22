@@ -14,7 +14,7 @@ cd
    
     printf "Done. User Ympker was added to sudoers group"
      fi
-     
+   
 read -r -p "Do you want to install OpenSSH Server? [Y/n]" response
  response=${response,,} # tolower
  if [[ $response =~ ^(yes|y| ) ]]; then
@@ -35,9 +35,10 @@ read -r -p "Do you want to restart SSH and SSHD? [Y/n]" response
     sudo service sshd status
     printf "Done."
      fi
-read -r -p "Do you want to add your SSH Key? [Y/n]" response
+read -r -p "Do you want to add your SSH Key to user ympker? [Y/n]" response
  response=${response,,} # tolower
  if [[ $response =~ ^(yes|y| ) ]]; then
+    su ympker
     cd
     mkdir -p ~/.ssh
     echo test >> ~/.ssh/authorized_keys
