@@ -44,11 +44,11 @@ read -r -p "Do you want to restart SSH and SSHD? [Y/n]" response
 read -r -p "Do you want to add your SSH Key to user ympker? [Y/n]" response
  response=${response,,} # tolower
  if [[ $response =~ ^(yes|y| ) ]]; then
-    su ympker -c cd
-    su ympker -c mkdir -p ~/.ssh
-    su ympker -c echo test >> ~/.ssh/authorized_keys
-    su ympker -c chmod -R go= ~/.ssh
-    su ympker -c cd .ssh
+    cd
+    mkdir -p ~/.ssh
+    echo test >> ~/.ssh/authorized_keys
+    chmod -R go= ~/.ssh
+    cd .ssh
     sudo nano authorized_keys
     sudo service ssh restart
     sudo service sshd restart
