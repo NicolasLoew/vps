@@ -41,7 +41,7 @@ read -r -p "Do you want to restart SSH and SSHD? [Y/n]" response
     sudo service sshd status
     printf "Done."
      fi
-read -r -p "Do you want to add your SSH Key to user ympker? [Y/n]" response
+read -r -p "Do you want to add your SSH Key to user ympker? SWITCH TO user ympker before proceeding [Y/n]" response
  response=${response,,} # tolower
  if [[ $response =~ ^(yes|y| ) ]]; then
     cd
@@ -52,7 +52,7 @@ read -r -p "Do you want to add your SSH Key to user ympker? [Y/n]" response
     sudo nano authorized_keys
     sudo service ssh restart
     sudo service sshd restart
-    printf "Done."
+    printf "Done. Public Key added."
      fi
      
      read -r -p "Do you want to edit SSHD config? [Y/n]" response
