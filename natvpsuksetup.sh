@@ -1,4 +1,4 @@
- read -r -p "Do you want to update system and install nano, wget and sudo and adjust fstab? [Y/n]" response
+read -r -p "Do you want to update system and install nano, wget and sudo and adjust fstab? [Y/n]" response
  response=${response,,} # tolower
  if [[ $response =~ ^(yes|y| ) ]]; then
      apt-get -y update
@@ -10,6 +10,7 @@
      df -h /run
      cd
      fi
+     
      read -r -p "Do you want to adduser ympker? [Y/n]" response
  response=${response,,} # tolower
  if [[ $response =~ ^(yes|y| ) ]]; then
