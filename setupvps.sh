@@ -1,3 +1,4 @@
+#to run: bash setupvps.sh
 read -r -p "Do you want to update system and install nano, wget and sudo? [Y/n]" response
  response=${response,,} # tolower
  if [[ $response =~ ^(yes|y| ) ]]; then
@@ -37,6 +38,10 @@ read -r -p "Do you want to restart SSH and SSHD? [Y/n]" response
     sudo service sshd restart
     sudo service sshd status
     printf "Done."
+    #copy setup file to home directory of ympker and make it executable so you can pick up where you stopped when switching users
+    cp setupvps.sh /home/ympker/setupvps.sh
+    cd /home/ympker
+    chmod +x setupvps.sh
      fi
 read -r -p "Do you want to add your SSH Key to user ympker? SWITCH TO user ympker before proceeding [Y/n]" response
  response=${response,,} # tolower
