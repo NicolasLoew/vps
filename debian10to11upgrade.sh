@@ -1,15 +1,15 @@
 #!/bin/bash
 
 # Ensure the script is run with root privileges
-if [ "$EUID" -ne 0 ]; then
-  echo "Please run as root"
-  exit
-fi
+#if [ "$EUID" -ne 0 ]; then
+#  echo "Please run as root"
+#  exit
+#fi
 
 # Step 1: Update existing packages ; Make sure to select YES when asked to restart services
 echo "Updating existing packages..."
-apt update -y
-apt upgrade -y
+apt update
+apt upgrade
 apt autoremove -y
 
 # Step 2: Backup the current sources list
@@ -22,7 +22,7 @@ sed -i 's/buster/bullseye/g' /etc/apt/sources.list
 
 # Step 4: Update package list from new sources; For SSH keep local version
 echo "Updating package list from new sources..."
-apt update -y
+apt update
 
 # Step 5: Perform the upgrade
 echo "Upgrading to Debian 11..."
