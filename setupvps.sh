@@ -68,6 +68,7 @@ read -r -p "Do you want to add your SSH Key to user ympker? SWITCH TO user ympke
    #PubkeyAuthentication yes
    #PasswordAuthentication no
    #ChallengeResponseAuthentication no
+   #with Ubuntu 24 or later ChallengeResponseAuthentication no is replaced by KbdInteractiveAuthentication no
    
     printf "Done."
      fi
